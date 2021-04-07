@@ -17,8 +17,8 @@ def click(x,y):
     time.sleep(0.01)
     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, 0, 0)
 
-#Checks the 4 pixels to see if any of them is black
-#In the case the program detects a black pixel it calls the click function
+#Checks the 4 pixels to see if any of them are black
+#In the case where the program detects a black pixel it calls the click function
 while keyboard.is_pressed('q') == False:
     if pyautogui.pixel(803,829)[0] == 0:
         click(803,829)
